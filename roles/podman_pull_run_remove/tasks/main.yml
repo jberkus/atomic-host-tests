@@ -51,7 +51,7 @@
     # Test for https://bugzilla.redhat.com/show_bug.cgi?id=1592932
     #          https://bugzilla.redhat.com/show_bug.cgi?id=1593419
     - name: Run the popular container images testing for network access
-      command: "podman run --rm {{ item.key }} {{ item.value }}"
+      command: "podman run --rm --security-opt seccomp=unconfined {{ item.key }} {{ item.value }}"
       with_dict: "{{ pull_images }}"
 
     # Test for https://bugzilla.redhat.com/show_bug.cgi?id=1650512
