@@ -1,5 +1,5 @@
 ---
 # vim: set ft=ansible:
-g_image_name: 'docker.io/httpd'
+g_image_name: 'quay.io/testing-farm/httpd'
 g_ports: '80:80'
 g_service_name: 'httpd'
