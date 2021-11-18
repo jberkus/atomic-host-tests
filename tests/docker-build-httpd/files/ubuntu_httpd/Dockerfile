@@ -8,6 +8,9 @@ ENV container docker
 
 COPY Dockerfile /root/
 
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/New_York
+
 RUN apt-get update && \
     apt-get -y install apache2 && \
     apt-get clean
